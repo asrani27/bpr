@@ -97,6 +97,7 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function () {
     Route::get('superadmin/sertifikat/edit/{id}', [SertifikatController::class, 'edit']);
     Route::post('superadmin/sertifikat/edit/{id}', [SertifikatController::class, 'update']);
     Route::get('superadmin/sertifikat/delete/{id}', [SertifikatController::class, 'delete']);
+    Route::get('superadmin/sertifikat/cetak/{id}', [SertifikatController::class, 'cetak']);
 
     Route::get('superadmin/pencairan', [PencairanController::class, 'index']);
     Route::get('superadmin/pencairan/check', [PencairanController::class, 'check']);

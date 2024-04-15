@@ -36,7 +36,7 @@
                     <td>{{$item->deposito == null ? '': $item->deposito->nomor}}</td>
                     <td>{{$item->nasabah == null ? '': $item->nasabah->nama}}</td>
                     <td>
-                      <a href="/superadmin/sertifikat/cetak/{{$item->id}}" class="btn btn-xs btn-flat  btn-primary"><i class="fa fa-print"></i>Cetak Sertifikat</a>
+                      <a href="/superadmin/sertifikat/cetak/{{$item->id}}" target="_blank" class="btn btn-xs btn-flat  btn-primary"><i class="fa fa-print"></i>Cetak Sertifikat</a>
                         <a href="/superadmin/sertifikat/edit/{{$item->id}}" class="btn btn-xs btn-flat  btn-success"><i class="fa fa-edit"></i></a>
                         <a href="/superadmin/sertifikat/delete/{{$item->id}}"
                             onclick="return confirm('Yakin ingin di hapus');"

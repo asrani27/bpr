@@ -47,4 +47,11 @@ class SertifikatController extends Controller
         Session::flash('success', 'Berhasil');
         return redirect('/superadmin/sertifikat');
     }
+
+
+    public function cetak($id)
+    {
+        $data = Sertifikat::find($id);
+        return view('admin.sertifikat.cetak', compact('data'));
+    }
 }
