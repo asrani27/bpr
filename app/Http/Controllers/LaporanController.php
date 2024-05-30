@@ -48,7 +48,19 @@ class LaporanController extends Controller
         }
     }
 
+    public function mutasi()
+    {
+        $nomor = request()->get('nomor');
 
+        $check = Deposito::where('nomor', $nomor)->first();
+        if ($check != null) {
+            $data = Setoran::where('deposito_id', $check->id)->get();
+            return view('admin.laporan.mutasi', compact('data', 'check'));
+        } else {
+            Session::flash('info', 'Tidak ada data');
+            return back();
+        }
+    }
     public function periode(Request $req)
     {
         $from = $req->mulai;

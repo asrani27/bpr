@@ -112,6 +112,7 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function () {
     Route::post('superadmin/laporan/periode', [LaporanController::class, 'periode']);
     Route::get('superadmin/laporan/pegawai', [LaporanController::class, 'pegawai']);
     Route::get('superadmin/laporan/perorangan', [LaporanController::class, 'perorangan']);
+    Route::get('superadmin/laporan/mutasi', [LaporanController::class, 'mutasi']);
     Route::get('superadmin/laporan/nasabah', [LaporanController::class, 'nasabah']);
     Route::get('superadmin/laporan/stok', [LaporanController::class, 'stok']);
     Route::get('superadmin/laporan/pengajuan', [LaporanController::class, 'pengajuan']);
